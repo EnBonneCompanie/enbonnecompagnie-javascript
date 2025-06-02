@@ -83,6 +83,10 @@ img {
 }
 #pageContent h2 {
     color: #5bc0de;
+    font-weight: 400;
+}
+#pageContent > div {
+    margin-bottom: 20px;
 }
 #pageContent table {
     width: 100%;
@@ -96,4 +100,39 @@ img {
 }
 #pageContent th {
     background-color: #f2f2f2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .page-buttons {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .page-buttons button {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .split {
+        flex-direction: column;
+        gap: 20px; /* Add some space between stacked elements */
+    }
+
+    .split > div {
+        width: 100%; /* Make split columns take full width when stacked */
+    }
+
+    img {
+        margin-top: 10px; /* Add space above images when stacked */
+    }
 }

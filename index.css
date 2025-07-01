@@ -228,6 +228,12 @@ img[src*="figure_1.png"] {
     img {
         margin-top: 10px;
     }
+
+    #pageContent div:has(a[href*="neurology.org"]),
+    #pageContent div:has(a[href*="geronb"]) {
+        overflow-wrap: break-word;
+        word-break: break-all;
+    }
 }
 
 /* Mission statement styling */

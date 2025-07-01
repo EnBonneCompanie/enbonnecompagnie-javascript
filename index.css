@@ -294,6 +294,11 @@ img[src*="figure_1.png"] {
     font-size: 0.95rem;
 }
 
+.key-point.active p {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 .key-point:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -310,26 +315,46 @@ img[src*="figure_1.png"] {
     color: #666;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .key-points {
         grid-template-columns: 1fr;
         gap: 0.8rem;
     }
-
     .key-point {
         min-height: 100px;
         padding: 1rem;
     }
-
     .key-point h3 {
         font-size: 1.2rem;
         padding-top: 0.6rem;
     }
-
     .highlight-text {
         font-size: 1.2rem;
     }
+    .key-point p {
+        font-size: 1rem;
+    }
+}
+
+/* Tap-to-reveal for hover-image on mobile */
+@media (max-width: 768px) {
+  .hover-image {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    position: static;
+    max-width: 100%;
+    box-shadow: none;
+    margin: 10px 0 0 0;
+    left: 0;
+    transform: none;
+  }
+  .certification-hover.active .hover-image {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    position: static;
+  }
 }
 
 .presentation-box {

@@ -234,4 +234,69 @@ function render() {
 }
 
 // Initialize the app when the DOM is loaded
-document.addEventListener('DOMContentLoaded', render);
+document.addEventListener('DOMContentLoaded', function() {
+  render();
+
+  // Tap-to-reveal for key-points on mobile
+  function enableKeyPointTap() {
+    if (window.innerWidth > 768) return;
+    document.querySelectorAll('.key-point').forEach(function(box) {
+      box.onclick = function(e) {
+        // Only allow one open at a time
+        document.querySelectorAll('.key-point').forEach(function(other) {
+          if (other !== box) other.classList.remove('active');
+        });
+        box.classList.toggle('active');
+      };
+    });
+  }
+
+  // Tap-to-reveal for certification-hover (hover-image) on mobile
+  function enableCertificationTap() {
+    if (window.innerWidth > 768) return;
+    document.querySelectorAll('.certification-hover').forEach(function(el) {
+      el.onclick = function(e) {
+        e.stopPropagation();
+        // Only allow one open at a time
+        document.querySelectorAll('.certification-hover').forEach(function(other) {
+          if (other !== el) other.classList.remove('active');
+        });
+        el.classList.toggle('active');
+      };
+    });
+    // Close on outside tap
+    document.body.addEventListener('click', function() {
+      document.querySelectorAll('.certification-hover').forEach(function(el) {
+        el.classList.remove('active');
+      });
+    });
+    // Prevent closing when clicking inside
+    document.querySelectorAll('.hover-image').forEach(function(img) {
+      img.onclick = function(e) { e.stopPropagation(); };
+    });
+  }
+
+  // Re-enable tap logic after each render
+  function afterRender() {
+    enableKeyPointTap();
+    enableCertificationTap();
+  }
+
+  // Patch renderContent to call afterRender
+  const origRenderContent = renderContent;
+  renderContent = function() {
+    origRenderContent();
+    afterRender();
+  };
+
+  // Initial enable
+  afterRender();
+
+  // Re-enable on resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth <= 768) {
+      enableKeyPointTap();
+      enableCertificationTap();
+    }
+  });
+});

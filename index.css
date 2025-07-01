@@ -409,3 +409,70 @@ img[src*="figure_1.png"] {
     margin: 0;
     max-width: 100%;
 }
+
+/* Custom grid for key points with horizontal services box */
+.custom-key-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.custom-key-points .key-point:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.custom-key-points .key-point:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.custom-key-points .key-point-horizontal {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #71C5DA;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem 1.2rem;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.custom-key-points .key-point-horizontal h3 {
+  color: #71C5DA;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0.5rem;
+}
+.custom-key-points .key-point-horizontal p {
+  opacity: 1;
+  visibility: visible;
+  color: #666;
+  text-align: center;
+  font-size: 1.05rem;
+  margin: 0;
+}
+.custom-key-points .key-point-horizontal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+@media (max-width: 768px) {
+  .custom-key-points {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0.8rem;
+  }
+  .custom-key-points .key-point:nth-child(1),
+  .custom-key-points .key-point:nth-child(2),
+  .custom-key-points .key-point-horizontal {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .custom-key-points .key-point-horizontal {
+    padding: 1.2rem 1rem;
+    font-size: 1rem;
+  }
+}

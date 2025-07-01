@@ -2,6 +2,10 @@ const LANGUAGES = { fr: "Français", es: "Español", en: "English" };
 let language = "fr";
 let currentPage = 0;
 
+function isTouchDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+}
+
 let pages = JSON.parse(localStorage.getItem("savedPages")) || [
   {
     title: {
@@ -252,9 +256,9 @@ function render() {
 document.addEventListener('DOMContentLoaded', function() {
   render();
 
-  // Tap-to-reveal for key-points on mobile
+  // Tap-to-reveal for key-points on touch devices
   function enableKeyPointTap() {
-    if (window.innerWidth > 768) return;
+    if (!isTouchDevice()) return;
     document.querySelectorAll('.key-point').forEach(function(box) {
       box.onclick = function(e) {
         // Only allow one open at a time
@@ -266,9 +270,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Tap-to-reveal for certification-hover (hover-image) on mobile
+  // Tap-to-reveal for certification-hover (hover-image) on touch devices
   function enableCertificationTap() {
-    if (window.innerWidth > 768) return;
+    if (!isTouchDevice()) return;
     document.querySelectorAll('.certification-hover').forEach(function(el) {
       el.onclick = function(e) {
         e.stopPropagation();
@@ -309,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Re-enable on resize
   window.addEventListener('resize', function() {
-    if (window.innerWidth <= 768) {
+    if (isTouchDevice()) {
       enableKeyPointTap();
       enableCertificationTap();
     }

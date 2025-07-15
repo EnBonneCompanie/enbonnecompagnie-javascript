@@ -2,19 +2,25 @@ body {
     font-family: 'Aptos', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     line-height: 1.6;
+    font-size: 1.3rem;
 }
 
 .top-bar {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
 }
 
 h1 {
-    font-size: 3rem;
+    font-family: 'Nunito', 'Aptos', sans-serif;
+    font-size: 5.7rem;
     font-weight: 300;
     color: #71C5DA;
     text-align: center;
@@ -71,6 +77,7 @@ img[src*="figure_1.png"] {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-size: 1.25rem;
 }
 .page-buttons button:hover {
     color: #71C5DA;
@@ -83,11 +90,19 @@ img[src*="figure_1.png"] {
     border: 1px solid #71C5DA;
 }
 #languageSelect {
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    font-size: 1rem;
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    background: #fafbfc;
+    box-shadow: none;
+    color: #444;
+    width: auto;
+    min-width: 0;
+    max-width: 180px;
 }
 #pageContent {
     margin-top: 20px;
@@ -100,11 +115,13 @@ img[src*="figure_1.png"] {
     color: #71C5DA;
     font-weight: 400;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 #pageContent h3 {
     color: #71C5DA;
     font-weight: 400;
     margin-top: 30px;
+    font-size: 1.5rem;
 }
 #pageContent > div {
     margin-bottom: 20px;
@@ -196,6 +213,7 @@ img[src*="figure_1.png"] {
     body {
         max-width: 100%;
         padding: 10px;
+        font-size: 1rem;
     }
 
     .top-bar {
@@ -229,6 +247,10 @@ img[src*="figure_1.png"] {
         margin-top: 10px;
     }
 
+    h1 {
+        font-size: 3rem;
+    }
+
     #pageContent div:has(a[href*="neurology.org"]),
     #pageContent div:has(a[href*="geronb"]) {
         overflow-wrap: break-word;
@@ -246,7 +268,7 @@ img[src*="figure_1.png"] {
 }
 
 .highlight-text {
-    font-size: 1.3rem;
+    font-size: 1.45rem;
     color: white;
     font-weight: 500;
     line-height: 1.6;
@@ -297,7 +319,7 @@ img[src*="figure_1.png"] {
     transition: all 0.3s ease;
     margin-top: 0;
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
 }
 
 .key-point.active p {
@@ -380,7 +402,7 @@ img[src*="figure_1.png"] {
 .presentation-box h3 {
     color: #71C5DA;
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: center;
     margin-bottom: 0.8rem;
     transition: all 0.3s ease;
@@ -401,7 +423,7 @@ img[src*="figure_1.png"] {
     transition: all 0.3s ease;
     margin: 0;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
 
 .program-name {
@@ -421,8 +443,9 @@ img[src*="figure_1.png"] {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 1rem;
-  margin: 1rem 0;
+  gap: 0.5rem;
+  margin: 0;
+  background: none;
 }
 .custom-key-points .key-point:nth-child(1) {
   grid-column: 1;
@@ -437,10 +460,9 @@ img[src*="figure_1.png"] {
   grid-row: 2;
   background: white;
   border-radius: 10px;
-  border: 2px solid #71C5DA;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  padding: 1.5rem 1.2rem;
-  min-height: 80px;
+  padding: 0.7rem 0.7rem;
+  min-height: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -458,7 +480,7 @@ img[src*="figure_1.png"] {
   visibility: visible;
   color: #666;
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   margin: 0;
 }
 .custom-key-points .key-point-horizontal:hover {
@@ -481,4 +503,299 @@ img[src*="figure_1.png"] {
     padding: 1.2rem 1rem;
     font-size: 1rem;
   }
+}
+
+.sci-context-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  margin: 2rem 0;
+}
+.sci-context-text, .sci-context-img {
+  background: #fff;
+  border: 2px solid #71C5DA;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sci-context-text {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 1.15rem;
+  padding: 0.7rem 1rem;
+  position: relative;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.sci-context-text::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  border-top: 2px solid #71C5DA;
+  margin-bottom: 0.7rem;
+}
+.sci-context-text::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  border-bottom: 2px solid #71C5DA;
+  margin-top: 0.7rem;
+}
+.sci-context-img {
+  flex: 2.2 1 0;
+  min-width: 200px;
+  max-width: 650px;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.sci-context-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+@media (max-width: 900px) {
+  .sci-context-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .sci-context-img {
+    max-width: 100%;
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+.accueil-intro {
+  font-style: italic;
+  color: #ff6f61;
+  font-size: 1.35rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.accueil-highlight {
+  color: #71C5DA;
+  font-weight: bold;
+  font-size: 1.35rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.accueil-title-box {
+  background: #71C5DA;
+  color: #fff;
+  font-family: 'Nunito', 'Aptos', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 16px;
+  padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+  margin: 0 auto 0.7rem auto;
+  display: block;
+  max-width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+@media (max-width: 600px) {
+  .accueil-title-box {
+    font-size: 1rem;
+    padding: 0.3rem 0.3rem;
+    white-space: normal;
+  }
+}
+
+.accueil-grey-italic {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.accueil-columns {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.accueil-col {
+  flex: 1 1 0;
+  min-width: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.1rem 0.7rem;
+  text-align: center;
+  margin: 0 0.1rem;
+}
+.accueil-col h3 {
+  color: #71C5DA;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+.accueil-col p {
+  color: #666;
+  font-size: 1.05rem;
+  margin: 0;
+}
+.accueil-col.approche {
+  background: #71C5DA;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.35s, color 0.35s;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.accueil-col.approche h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff !important;
+  margin: 0;
+  transition: font-size 0.35s, color 0.35s, transform 0.35s, margin 0.35s;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.accueil-col h3 .emoji {
+  font-size: 1.4rem;
+  margin-bottom: 0.02rem;
+}
+.accueil-col.approche:hover h3 .emoji,
+.accueil-col.approche.active h3 .emoji {
+  display: none;
+}
+.accueil-col.approche:hover h3 .emoji,
+.accueil-col.approche.active h3 .emoji {
+  margin-bottom: 0.05rem;
+}
+.accueil-col.approche p {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.35s, max-height 0.35s;
+  color: #333;
+  margin-top: 0.7rem;
+  font-size: 1.05rem;
+  z-index: 2;
+  text-align: center;
+}
+.accueil-col.approche:hover,
+.accueil-col.approche.active {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  justify-content: center;
+}
+.accueil-col.approche:hover h3,
+.accueil-col.approche.active h3 {
+  font-size: 1.1rem;
+  color: #71C5DA !important;
+  transform: translateY(-1.1rem);
+  margin-bottom: 0.2rem;
+}
+.accueil-col.approche:hover p,
+.accueil-col.approche.active p,
+.accueil-col.objectif:hover p,
+.accueil-col.objectif.active p,
+.accueil-col.services:hover p,
+.accueil-col.services.active p {
+  opacity: 1;
+  max-height: 400px;
+  color: #333;
+}
+.accueil-col.objectif, .accueil-col.services {
+  background: #71C5DA;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.35s, color 0.35s;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.accueil-col.objectif h3, .accueil-col.services h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff !important;
+  margin: 0;
+  transition: font-size 0.35s, color 0.35s, transform 0.35s, margin 0.35s;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.accueil-col.objectif h3 .emoji, .accueil-col.services h3 .emoji {
+  font-size: 1.4rem;
+  margin-bottom: 0.02rem;
+}
+.accueil-col.objectif p, .accueil-col.services p {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.35s, max-height 0.35s;
+  color: #333;
+  margin-top: 0.7rem;
+  font-size: 1.05rem;
+  z-index: 2;
+  text-align: center;
+}
+.accueil-col.objectif:hover, .accueil-col.objectif.active,
+.accueil-col.services:hover, .accueil-col.services.active {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  justify-content: center;
+}
+.accueil-col.objectif:hover h3, .accueil-col.objectif.active h3,
+.accueil-col.services:hover h3, .accueil-col.services.active h3 {
+  font-size: 1.1rem;
+  color: #71C5DA !important;
+  transform: translateY(-1.1rem);
+  margin-bottom: 0.2rem;
+}
+.accueil-col.objectif:hover h3 .emoji, .accueil-col.objectif.active h3 .emoji,
+.accueil-col.services:hover h3 .emoji, .accueil-col.services.active h3 .emoji {
+  display: none;
+}
+@media (max-width: 800px) {
+  .accueil-columns {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .accueil-col {
+    margin: 0;
+  }
+}
+
+.key-points-wrapper {
+  border: 2px solid #71C5DA;
+  border-radius: 12px;
+  padding: 0.7rem 0.5rem;
+  background: #fff;
+  margin-bottom: 1.2rem;
 }

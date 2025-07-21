@@ -21,7 +21,7 @@ let pages = [
 <div class="accueil-columns">
   <div class="accueil-col approche"><h3>Approche<br><span class='emoji'>🤝</span></h3><p>Planifier des visites amicales pour nos ainés vivant avec une démence ou à risque de le développer.</p></div>
   <div class="accueil-col objectif"><h3>Objectif<br><span class='emoji'>🎯</span></h3><p>En réduisant la solitude, l'objectif serait de ralentir, ou prévenir la progression de ces maladies.</p></div>
-  <div class="accueil-col services"><h3>Les Services<br><span class='emoji'>💫</span></h3><p>--Gratuit--<br>Visant les quartiers du Centre et du Centre-Est de Montréal<br>En Français, Anglais ou Espagnol</p></div>
+  <div class="accueil-col services"><h3>Les Services<br><span class='emoji'>💫</span></h3><p>Visant les quartiers du Centre et du Centre-Est de Montréal<br>En Français, Anglais ou Espagnol</p></div>
 </div>
 <div class="disponibilites-block"><h2>Disponibilités</h2><p>Vous pouvez réserver l'heure souhaitée à l'aide du calendrier ci-dessous:</p><iframe src="https://calendly.com/fcbarca8-oc/new-meeting" width="100%" height="600" frameborder="0"></iframe></div>
 <div class="contact-block"><h2>Contact</h2><p>Pour toute question, n'hésitez pas à me contacter par courriel à l'adresse <a href='mailto:patrick.oconnor@umontreal.ca'>patrick.oconnor@umontreal.ca</a> ou par message texte au <a href='sms:18199624989'>(819) 962-4989</a>.</p></div>`,
@@ -29,7 +29,7 @@ let pages = [
 <div class="accueil-columns">
   <div class="accueil-col approche"><h3>Enfoque<br><span class='emoji'>🤝</span></h3><p>Planificar visitas amistosas para nuestros mayores que viven con demencia o que están en riesgo de desarrollarla.</p></div>
   <div class="accueil-col objectif"><h3>Objetivo<br><span class='emoji'>🎯</span></h3><p>Al reducir la soledad, el objetivo sería frenar o prevenir la progresión de estas enfermedades.</p></div>
-  <div class="accueil-col services"><h3>Servicios<br><span class='emoji'>💫</span></h3><p>--Gratuito--<br>Dirigido a los barrios del Centro y Centro-Este de Montreal<br>En francés, inglés o español</p></div>
+  <div class="accueil-col services"><h3>Servicios<br><span class='emoji'>💫</span></h3><p>Dirigido a los barrios del Centro y Centro-Este de Montreal<br>En francés, inglés o español</p></div>
 </div>
 <div class="disponibilites-block"><h2>Disponibilidad</h2><p>Puede reservar la hora deseada a través del calendario a continuación:</p><iframe src="https://calendly.com/fcbarca8-oc/new-meeting" width="100%" height="600" frameborder="0"></iframe></div>
 <div class="contact-block"><h2>Contacto</h2><p>Para cualquier pregunta, no dude en contactarme por correo electrónico a <a href='mailto:patrick.oconnor@umontreal.ca'>patrick.oconnor@umontreal.ca</a> o por mensaje de texto al <a href='sms:18199624989'>(819) 962-4989</a>.</p></div>`,
@@ -37,7 +37,7 @@ let pages = [
 <div class="accueil-columns">
   <div class="accueil-col approche"><h3>Approach<br><span class='emoji'>🤝</span></h3><p>Plan friendly visits for our seniors living with dementia or at risk of developing it.</p></div>
   <div class="accueil-col objectif"><h3>Objective<br><span class='emoji'>🎯</span></h3><p>By reducing loneliness, the goal would be to slow down or prevent the progression of these diseases.</p></div>
-  <div class="accueil-col services"><h3>Services<br><span class='emoji'>💫</span></h3><p>--Free--<br>Serving the Central and East-Central districts of Montreal<br>In French, English, or Spanish</p></div>
+  <div class="accueil-col services"><h3>Services<br><span class='emoji'>💫</span></h3><p>Serving the Central and East-Central districts of Montreal<br>In French, English, or Spanish</p></div>
 </div>
 <div class="availability-block"><h2>Availability</h2><p>You can book your desired time using the calendar below:</p><iframe src="https://calendly.com/fcbarca8-oc/new-meeting" width="100%" height="600" frameborder="0"></iframe></div>
 <div class="contact-block"><h2>Contact</h2><p>For any questions, feel free to contact me by email at <a href='mailto:patrick.oconnor@umontreal.ca'>patrick.oconnor@umontreal.ca</a> or by text at <a href='sms:18199624989'>(819) 962-4989</a>.</p></div>`
@@ -71,9 +71,9 @@ let pages = [
   },
   {
     title: {
-      fr: "Contexte Scientifique",
-      es: "Contexto Científico",
-      en: "Scientific Context"
+      fr: "Contexte",
+      es: "Contexto",
+      en: "Context"
     },
     content: [
       {

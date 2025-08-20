@@ -2,11 +2,11 @@ body {
     font-family: 'Aptos', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     line-height: 1.6;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .top-bar {
@@ -20,7 +20,7 @@ body {
 
 h1 {
     font-family: 'Nunito', 'Aptos', sans-serif;
-    font-size: 5.7rem;
+    font-size: 4.2rem;
     font-weight: 300;
     color: #71C5DA;
     text-align: center;
@@ -36,6 +36,10 @@ textarea, input[type="text"] {
 .split {
     display: flex;
     gap: 1rem;
+    align-items: flex-start;
+}
+.split > div:last-child {
+    margin-top: 2rem;
 }
 .split textarea {
     width: 50%;
